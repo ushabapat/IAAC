@@ -1,0 +1,29 @@
+replicaCount: 1
+
+image:
+  repository: nginx
+  pullPolicy: IfNotPresent
+  tag: "stable"
+
+service:
+  type: LoadBalancer
+  port: 80
+serviceAccount:
+  create: true  # or false, depending on your chart's requirements
+
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - host: nginx-example.local
+      paths: ["/"]
+  tls: []
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
