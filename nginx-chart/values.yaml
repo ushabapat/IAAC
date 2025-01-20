@@ -20,7 +20,7 @@ ingress:
       paths: ["/"]
   tls: []
 autoscaling:
-  enabled: flase
+  enabled: false
 resources: {}
 
 nodeSelector: {}
