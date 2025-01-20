@@ -19,7 +19,8 @@ ingress:
     - host: nginx-example.local
       paths: ["/"]
   tls: []
-
+autoscaling:
+  enabled: flase
 resources: {}
 
 nodeSelector: {}
