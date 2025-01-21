@@ -13,16 +13,16 @@ Get default password
 
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}"
 
-Install Cli
 
-Powershell:
+Optional :Powershell:
 
 $version = (Invoke-RestMethod https://api.github.com/repos/argoproj/argo-cd/releases/latest).tag_name
 $url = "https://github.com/argoproj/argo-cd/releases/download/" + $version + "/argocd-windows-amd64.exe"
 Invoke-WebRequest -Uri $url -OutFile $output
-Use cli
 
-Login:
+NOTE: Expose the argocd-server service to get the public IP, so that you can connect to the ARGOCD UI outside the cluster and no need to perform any port-forward to validate. It will also help to login using cli and check the status of the sync.
+
+Use cli for Login:
 
 argocd login <exposed argocd IP or domain associated to argocd> --username admin --password "xxxxxxxxxxx" --insecure 
 
