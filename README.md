@@ -24,7 +24,7 @@ NOTE: Expose the argocd-server service to get the public IP, so that you can con
 
 Use cli for Login:
 
-argocd login <exposed argocd IP or domain associated to argocd> --username admin --password "xxxxxxxxxxx" --insecure 
+argocd login (LB IP example:  4.123.10.150:443 or the domain name) --username admin --password "xxxxxxxxxxx" --insecure 
 
 
 Get default password
