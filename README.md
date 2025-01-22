@@ -1,6 +1,8 @@
 Description :   
 
-The Nginx deployment in AKS cluster using helm chart with Argocd integration. 
+The Nginx deployment in AKS cluster using helm chart with Argocd integration. In this case I have considered a nginx deployment as a sample to validate the deployment via Argo CD.
+
+NOTE:  The Image TAG value will get updated automatically from the build and deployment of the application workflow.  The application is based on the .net. I have not created a new helm chart for the same. Just used the same helm chart to check if the TAG value get automatically or not.  
 
 
 
