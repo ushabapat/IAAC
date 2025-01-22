@@ -1,4 +1,6 @@
-The Nginx deployment using helm chart with Argocd integration.
+Description :   
+
+The Nginx deployment in AKS cluster using helm chart with Argocd integration. 
 
 
 
