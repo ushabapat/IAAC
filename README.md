@@ -50,6 +50,41 @@ For deployment of application:
 argocd app create nginx   --repo https://github.com/ushabapat/IAAC.git   --path nginx-chart   --dest-server https://kubernetes.default.svc   --dest-namespace default --revision master
 
 Use argocd app sync nginx
+Valiate the sync is successful. You can alos validate in the argocd ui to check the details.
+
+Rollback
+
+
+
+ArgoCD allows you to rollback to any previously synchronized version.
+
+	1.	List the history of deployments:
+
+
+argocd app history nginx
+
+
+
+
+	2.	Rollback to a specific version (e.g., nginx-v1):
+
+
+
+argocd app rollback nginx 1
+
+
+
+Automating Versioned Deployments
+
+
+
+In the current workflow :
+
+	1.	Update in the Git repository.
+
+	2.	Uses the ArgoCD CLI or API to update the application path and sync.
+
+Use argocd app sync nginx
 Valiate the sync is successful. You can alos validate in the argocd ui to check the details. 
 
 
